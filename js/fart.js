@@ -112,7 +112,7 @@ Fart.prototype.play = function(sound, callback) {
 	callback = callback || null;
 	if (!this.fart_old_player) {
 		var ext = (this.fart_player.canPlayType('audio/mp3')) ? '.mp3' : '.wav';
-		this.fart_player.setAttribute('src', "/farts/" + fart + ext);
+		this.fart_player.setAttribute('src', "/fart.js/farts/" + fart + ext);
 		this.fart_player.loop = this.options.loop;
 		this.fart_player.volume = (this.options.volume / 100);
 		this.fart_player.play();
@@ -123,7 +123,7 @@ Fart.prototype.play = function(sound, callback) {
 		}
 		});
 	} else {
-		this.fart_player.URL = "/farts/" + fart + '.mp3';
+		this.fart_player.URL = "/fart.js/farts/" + fart + '.mp3';
 	}
 };
 
